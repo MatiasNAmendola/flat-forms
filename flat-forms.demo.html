@@ -1,0 +1,166 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Flat Forms</title>
+
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Jquery-async : jQuery plugin to animate buttons when an asynchronous process is waiting to complete (ajax, etc.)" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <link href="css/flat-forms.css" rel="stylesheet">
+
+</head>
+<body style="padding:12px;text-align: center;">
+
+<h1>Flat forms</h1>
+<h3>This is pure CSS</h3>
+<hr/>
+
+<form class="flat-form">
+
+    <p class="text">In flat-forms, inputs look like this:</p>
+
+    <div class="input-wrap required">
+        <input type="text" id="username" name="username" placeholder="eg: acavailhez"/>
+        <label for="username"><span>Choose a username</span></label>
+    </div>
+
+    <p class="text">Inputs can be stacked together<br/>
+    Here is an example of a typical sign up form:</p>
+
+    <div class="input-wrap required stack">
+        <input type="text" id="first-name" name="firstName" placeholder="eg: Arnaud"/>
+        <label for="first-name"><span>First Name </span></label>
+    </div>
+
+    <div class="input-wrap required stack">
+        <input type="text" id="last-name" name="lastName"  placeholder="eg: CAVAILHEZ"/>
+        <label for="last-name"><span>Last Name</span></label>
+    </div>
+
+    <div class="input-wrap required stack">
+        <input type="password" id="password" name="password"/>
+        <label for="password"><span>Your password</span></label>
+    </div>
+
+
+    <div class="input-wrap required stack">
+        <input type="email" id="email" name="email"  placeholder="eg: arnaud@cavailhez.fr"/>
+        <label for="email"><span>Your e-mail address</span></label>
+    </div>
+
+    <p class="text">Signal errors by appending them below the input:</p>
+
+    <div class="input-wrap">
+        <input type="password" id="password2" name="password2" class="error"/>
+        <label for="password2"><span>Your password</span></label>
+        <div class="errors">Must be between 13 and 16 characters, contains uppercase and lowercase letters and have a non-traditonnal ASCII character in it</div>
+    </div>
+
+
+    <p class="text">Here are examples of checkboxes, radio buttons, etc.:</p>
+
+
+    <div class="input-wrap">
+        <input type="checkbox" id="cats" name="cats" checked="checked"/>
+        <label for="cats"><span>You approve of cats</span></label>
+    </div>
+
+    
+
+    <div class="input-wrap">
+        <input type="checkbox" id="dogs" name="dogs"/>
+        <label for="dogs"><span>You also approve of dogs, giraffes, ourangutans and giant squids</span></label>
+    </div>
+
+    
+
+    <div class="input-wrap">
+        <select id="marital" name="marital">
+            <option value="single">single</option>
+            <option value="married">married</option>
+            <option value="divorced">divorced</option>
+            <option value="other">other</option>
+        </select>
+        <label for="marital"><span>Marital status</span></label>
+    </div>
+
+    
+
+    <div class="input-wrap">
+        <textarea type="checkbox" id="chicken" name="chicken" rows="6" placeholder="eg: The chicken has no roof"></textarea>
+        <label for="chicken"><span>What is the difference between a chicken and a house?</span></label>
+    </div>
+
+    
+
+    <div class="input-wrap">
+        <div class="group-label">Your gender</div>
+        <label class="radio" for="gender-male">
+            <input type="radio" name="gender" id="gender-male" value="male" checked="">
+            <span>Male</span>
+        </label>
+        <label class="radio" for="gender-female">
+            <input type="radio" name="gender" id="gender-female" value="other" checked="">
+            <span>Female</span>
+        </label>
+        <label class="radio" for="gender-other">
+            <input type="radio" name="gender" id="gender-other" value="other" checked="">
+            <span>Something that is not 100% male or 100% female physically or emotionaly</span>
+        </label>
+    </div>
+
+    <div class="input-wrap">
+        <input type="file" id="license" name="license"/>
+        <label for="license"><span>Scan of your driver license</span></label>
+    </div>
+
+
+    <h3>With HTML5 input types</h3>
+    <hr/>
+
+    <div class="input-wrap">
+        <input type="number" id="age" name="age"/>
+        <label for="age"><span>How old are you?</span></label>
+    </div>
+
+    
+
+
+    <div class="input-wrap">
+        <input type="color" id="eyes-color" name="eyesColoc"/>
+        <label for="eyes-color"><span>Color of your eyes</span></label>
+    </div>
+
+    
+
+    <div class="input-wrap">
+        <input type="date" id="birthday" name="birthday"/>
+        <label for="birthday"><span>Your birth date</span></label>
+    </div>
+
+    
+
+
+
+    
+
+    <div class="input-wrap">
+        <input type="range" id="test" name="test"/>
+        <label for="test"><span>Test</span></label>
+    </div>
+
+
+</form>
+
+
+
+</body>
+</html>

@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <title>Flat Forms</title>
 
@@ -54,6 +54,11 @@
     <div class="input-wrap required stack">
         <input type="email" id="email" name="email"  placeholder="eg: arnaud@cavailhez.fr"/>
         <label for="email"><span>Your e-mail address</span></label>
+    </div>
+
+    <div class="input-wrap required stack">
+        <input type="tel" id="phone" name="email"  placeholder="eg: 415-530-6040"/>
+        <label for="phone"><span>Your phone number</span></label>
     </div>
 
     <p class="text">Signal errors by appending them below the input:</p>
@@ -159,6 +164,28 @@
 
 
 </form>
+
+
+<div id="modal-requestdemo" class="modal fade in">
+    <div class="modal-header">
+        <a href="#" class="close" data-dismiss="modal">&times;</a>
+        <h3>Request a demo</h3>
+    </div>
+    <div class="modal-body center flat-form">
+        <div class="input-wrap stack required">
+            <input type="email" id="request-email" name="requestEmail" placeholder="Type in your e-mail address"/>
+            <label for="request-email"><span>Your e-mail</span></label>
+        </div>
+
+        <div class="input-wrap stack required">
+            <textarea id="request-msg" name="requestMsg" placeholder="Describe your fleet" rows="7"></textarea>
+            <label for="request-msg"><span>Include a message</span></label>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-primary btn-large" id="request">Request a demo</a>
+    </div>
+</div>
 
 
 

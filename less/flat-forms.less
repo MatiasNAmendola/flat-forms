@@ -4,9 +4,15 @@
 @label-margin: 36px;
 @input-height: 48px;
 @input-padding-v: 14px;
+@textarea-line-height: 20px;
+
+@mobile-label-width:60px;
+@mobile-label-margin:12px;
+@mobile-input-height: 48px;
 
 @placeholder-color: #aaa;
 @border-color: #aaa;
+@modal-border-color: #ccc;
 @color-selected: #000;
 @color-unselected: #888;
 
@@ -94,7 +100,6 @@
     -moz-box-shadow: none;
     box-shadow: none;
 
-
   }
   .input-wrap > .input{
     height: auto;
@@ -166,12 +171,13 @@
 
     .color-transition(.05s)
   }
+
   textarea{
     height: 70px;
     padding-top: 12px;
     padding-bottom: 12px;
+    line-height: @textarea-line-height;
   }
-  @textarea-line-height: 14px;
   textarea[rows="1"]{
     height: @textarea-line-height;
   }
@@ -205,6 +211,7 @@
   textarea + label{
     top: 18px;
     height: auto;
+    line-height: 1em;
   }
   select{
     padding: 4px 6px;
@@ -220,8 +227,9 @@
     margin-left: @label-width + @label-margin;
   }
 
-  /* FOCUS */
-  input:focus{
+/* FOCUS */
+  input:focus,
+  textarea:focus{
     border-color: #666;
     z-index: 2;
 
@@ -230,7 +238,7 @@
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   }
 
-  /* PLACEHOLDER */
+/* PLACEHOLDER */
 
   input:-moz-placeholder,
   textarea:-moz-placeholder {
@@ -376,4 +384,127 @@
 .form-horizontal{
   width: 480px;
   display: inline-block;
+}
+
+
+
+/* MODALS */
+.modal-body.flat-form{
+
+  width: 100%;
+  padding: 7px 0 0px 0;
+  overflow: hidden;
+  margin-bottom: -1px;
+
+  .input-wrap{
+    width: 100%;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"],
+  select,
+  textarea,
+  .input{
+    width: 560px - @label-width - @label-margin - 12; /* size of modal */
+    padding-right: 12px;
+    border-color: @modal-border-color;
+  }
+  input:focus,
+  textarea:focus{
+    border-color: #999;
+  }
+
+  label{
+    padding-left: 12px;
+  }
+}
+
+/* RESPONSIVE */
+
+/* MOBILE */
+@media (max-width: 739px){
+  .flat-form{
+    width:100%;
+  }
+
+  .flat-form,
+  .modal-body.flat-form{
+    .input-wrap{
+      width:100%;
+    }
+
+    label{
+      font-size: 11px;
+      padding-left: 12px;
+      width:@mobile-label-width;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"],
+    select,
+    textarea,
+    .input{
+
+      width: 100%;
+      height: @mobile-input-height;
+      box-sizing: border-box;
+      padding-left: @mobile-label-width + @mobile-label-margin + 12 + 12;
+
+    }
+    textarea[rows="1"]{
+      height: @textarea-line-height + 2*@input-padding-v;
+    }
+    textarea[rows="2"]{
+      height: @textarea-line-height*2 + 2*@input-padding-v;
+    }
+    textarea[rows="3"]{
+      height: @textarea-line-height*3 + 2*@input-padding-v;
+    }
+    textarea[rows="4"]{
+      height: @textarea-line-height*4 + 2*@input-padding-v;
+    }
+    textarea[rows="5"]{
+      height: @textarea-line-height*5 + 2*@input-padding-v;
+    }
+    textarea[rows="6"]{
+      height: @textarea-line-height*6 + 2*@input-padding-v;
+    }
+    textarea[rows="7"]{
+      height: @textarea-line-height*7 + 2*@input-padding-v;
+    }
+    textarea[rows="8"]{
+      height: @textarea-line-height*8 + 2*@input-padding-v;
+    }
+    textarea[rows="9"]{
+      height: @textarea-line-height*9 + 2*@input-padding-v;
+    }
+    textarea[rows="10"]{
+      height: @textarea-line-height*10 + 2*@input-padding-v;
+    }
+  }
+
+
 }
